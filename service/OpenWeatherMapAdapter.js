@@ -10,7 +10,7 @@ function OpenWeatherMapAdapter(options) {
   logger.info("Creating OpenWeatherMapAdapter");
   this.validateOptions(options);
   this.options = options;
-  this.weatherInterface = new WeatherInterface();
+  this.weatherInterface = new WeatherInterface(options.OpenWeatherMap);
 };
 
 OpenWeatherMapAdapter.prototype.validateOptions = function(options) {
