@@ -22,6 +22,14 @@ OpenWeatherMapAdapter.prototype.validateOptions = function(options) {
 
 OpenWeatherMapAdapter.prototype.start = function() {
   var deferred = Q.defer();
+
+  setInterval(function() {
+    this.weatherInterface
+    .queryPostCode("OX14", "GB")
+    .then(function(result) {
+      logger.debug("Query result: ", result);
+    });
+  }.bind(this), 5000);
   deferred.resolve();
   return deferred.promise;
 };
