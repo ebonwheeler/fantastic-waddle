@@ -8,7 +8,7 @@ function OpenWeatherMapInterface(options) {
 }
 
 OpenWeatherMapInterface.prototype.queryPostCode = function(postCode, countryCode) {
-  var url = "https://api.openweathermap.org/data/2.5/weather?zip=" + postCode + "," + countryCode "&APPID=" + this.apiKey;
+  var url = "https://api.openweathermap.org/data/2.5/weather?zip=" + postCode + "," + countryCode + "&APPID=" + this.apiKey;
   var deferred = Q.defer();
 
   logger.debug("Making request to: ", url);
