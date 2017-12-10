@@ -27,5 +27,10 @@
     "q": "^1.4.1",
     "redis": "^2.6.3",
     "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }
